@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLFR Research Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background">
+      <canvas id="matrixCanvas"></canvas>
+    </div>
+
+    <header class="topnav">
+      <div class="brand">CLFR Research Portal</div>
+      <nav class="nav-links">
+        <a href="#home" data-page="home">Home</a>
+        <a href="#index" data-page="index">Index</a>
+        <a href="#experiments" data-page="experiments">Experiments</a>
+        <a href="#announcements" data-page="announcements">Announcements</a>
+      </nav>
+      <div class="user-section" id="topUserSection"></div>
+    </header>
+
+    <main class="content" id="content"></main>
+
+    <div id="profileModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Profile</h2>
+        <div class="profile-row">
+          <div class="avatar-large" id="profileAvatar"></div>
+          <div>
+            <div><strong>Username:</strong> <span id="profileUsername"></span></div>
+            <div><strong>Role:</strong> <span id="profileRole"></span></div>
+          </div>
+        </div>
+        <form id="avatarForm">
+          <div class="field">
+            <label for="avatar">Select avatar</label>
+            <select name="avatar" id="avatar">
+              <option value="assets/default-avatar.svg">Default</option>
+              <option value="assets/avatar-1.svg">Red Core</option>
+              <option value="assets/avatar-2.svg">Circuit</option>
+              <option value="assets/avatar-3.svg">Hex Grid</option>
+            </select>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Save</button>
+            <button class="btn btn-ghost" type="button" id="closeProfile">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="matrix.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
